@@ -35,10 +35,8 @@ $("body").on("keyup keydown keypress change", "input", function (e) {
 	$span_post_total.text(post_tariff);
 
 
-});
-
-$("body").on("click", ".calculate", function (e) {
-	e.preventDefault();
+	// $("body").on("click", ".calculate", function (e) {
+	// 	e.preventDefault();
 	let pre_total = 0;
 	let post_total = 0;
 	$(".pre_total").each(function () {
@@ -55,8 +53,8 @@ $("body").on("click", ".calculate", function (e) {
 		let value = $this_post_total_span.text();
 		value = parseFloat(value);
 		post_total = post_total + value;
-
 	});
+
 	console.log(pre_total);
 	// console.log(value);
 	console.log(post_total);
@@ -81,6 +79,7 @@ $("body").on("click", ".calculate", function (e) {
 		const $span_post_tariffs = $this_post_tarrif_total.find("span");
 		$span_post_tariffs.text(post_total);
 	});
+
 });
 
 // const temp = (pre_tariff + post_tariff);
